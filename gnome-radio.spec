@@ -19,11 +19,11 @@ BuildRequires:  pkgconfig(geocode-glib-1.0)
 BuildRequires:  pkgconfig(gstreamer-1.0)
 BuildRequires:  pkgconfig(gstreamer-plugins-bad-1.0)
 BuildRequires:  pkgconfig(gstreamer-plugins-base-1.0)
-Requires:       gstreamer1 >= 1.8.3
-Requires:       gstreamer1-plugins-ugly-free >= 1.8.3
-Requires:       geocode-glib >= 3.20.1
-Requires:       gtk3 >= 3.24.28
-Requires:       geoclue2 >= 2.5.7
+Requires:       gstreamer1.0-plugins-base
+Requires:       gstreamer1.0-plugins-ugly
+Requires:       geocode-glib
+Requires:       gtk+3.0
+Requires:       geoclue
 
 %description
 GNOME Radio 3 is a Free Software program that allows you easily
