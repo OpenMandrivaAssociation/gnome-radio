@@ -1,25 +1,24 @@
-Name:           @PACKAGE@
-Version:        @VERSION@
-Release:        1%{?dist}
+Name:           gnome-radio
+Version:        0.4.0
+Release:        1
 Summary:        GNOME Radio 3 for GNOME 42
 License:        GPLv3+
 URL:            https://people.gnome.org/~ole/%{name}
-Source:         %{url}/%{name}-%{version}.tar.xz
+Source:         https://people.gnome.org/~ole/%{name}/%{name}-%{version}.tar.xz
 
-BuildRequires:  gcc
-BuildRequires:  gtk3-devel
-BuildRequires:  pango
-BuildRequires:  libchamplain-devel
-BuildRequires:  libxml2-devel
+BuildRequires:  pkgconfig(gtk+-3.0)
+BuildRequires:  pkgconfig(pango)
+BuildRequires:  pkgconfig(champlain-0.12)
+BuildRequires:  pkgconfig(libxml-2.0)
 BuildRequires:  intltool
 BuildRequires:  itstool
-BuildRequires:  libappstream-glib
+BuildRequires:  pkgconfig(appstream-glib)
 BuildRequires:  desktop-file-utils
-BuildRequires:  geoclue2-devel
-BuildRequires:  geocode-glib-devel
-BuildRequires:  gstreamer1-devel
-BuildRequires:  gstreamer1-plugins-bad-free-devel
-BuildRequires:  gstreamer1-plugins-base-devel
+BuildRequires:  pkgconfig(geoclue-2.0)
+BuildRequires:  pkgconfig(geocode-glib-1.0)
+BuildRequires:  pkgconfig(gstreamer-1.0)
+BuildRequires:  pkgconfig(gstreamer-plugins-bad-1.0)
+BuildRequires:  pkgconfig(gstreamer-plugins-base-1.0)
 Requires:       gstreamer1 >= 1.8.3
 Requires:       gstreamer1-plugins-ugly-free >= 1.8.3
 Requires:       geocode-glib >= 3.20.1
@@ -41,12 +40,11 @@ Enjoy National Public Radio (NPR) broadcasts under GNOME 42.
 %build
 %configure --disable-silent-rules --disable-schemas
 %make_build
+
 %install
 %make_install
 %find_lang %{name}
-%check
-appstream-util validate-relax --nonet %{buildroot}%{_metainfodir}/%{name}.appdata.xml
-desktop-file-validate %{buildroot}/%{_datadir}/applications/%{name}.desktop
+
 %files -f %{name}.lang
 %doc AUTHORS NEWS README ChangeLog
 %license COPYING
