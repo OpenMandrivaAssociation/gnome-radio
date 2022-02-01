@@ -1,10 +1,10 @@
 Name:           gnome-radio
-Version:        0.4.0
+Version:        14.0.0
 Release:        1
 Summary:        GNOME Radio 3 for GNOME 42
 License:        GPLv3+
 URL:            https://people.gnome.org/~ole/%{name}
-Source:         https://people.gnome.org/~ole/%{name}/%{name}-%{version}.tar.xz
+Source:         https://download.gnome.org/sources/gnome-radio/14.0/gnome-radio-%{version}.tar.xz
 
 BuildRequires:  pkgconfig(gtk+-3.0)
 BuildRequires:  pkgconfig(pango)
