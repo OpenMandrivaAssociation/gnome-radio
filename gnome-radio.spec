@@ -1,5 +1,5 @@
 Name:           gnome-radio
-Version:        14.0.0
+Version:        16.0.42
 Release:        1
 Summary:        GNOME Radio 3 for GNOME 42
 License:        GPLv3+
