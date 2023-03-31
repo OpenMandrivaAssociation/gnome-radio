@@ -1,6 +1,6 @@
 Name:           gnome-radio
 Version:        16.0.42
-Release:        1
+Release:        2
 Summary:        GNOME Radio 3 for GNOME 42
 License:        GPLv3+
 URL:            https://people.gnome.org/~ole/%{name}
